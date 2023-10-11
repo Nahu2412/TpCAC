@@ -32,3 +32,20 @@ a:hover{
     gap: 4em;
     margin: 0px 40px;
 }
+
+/**************************************************//*Contact*/
+
+/*****************************//*Body*/
+#form-contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    height: 45em;
+}
+
+#contact-place{
+    height: 35em;
+    width: 35em;
+    background-color: aqua;
+}
