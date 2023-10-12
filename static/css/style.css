@@ -9,6 +9,7 @@ header{
     background-color: aliceblue;
     justify-content: space-between;
     align-items: center;
+    /*border-bottom: 1px solid #000;*/
 }
 li{
     list-style: none;
@@ -42,7 +43,7 @@ a:hover{
     height: 45em;
 }
 .container{
-    margin: 60px 0px;
+    margin: 40px 0px;
 }
 #contact-place{
     height: 35em;
@@ -50,10 +51,27 @@ a:hover{
     background-color: aqua;
 }
 #place-form{
-    margin: 0px 60px;
+    display: flex;
+    margin: 0px 180px;
 }
+#place-form form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
 .inputstyle{
     height: 4.3vh;
-    width: 30vw;
-    border: 1px solid #EDEDED;
+    width: 38vw;
+    border: 1px solid #cfcfcf;
+}
+label{
+    font-size: 15px;
+    color: #2e2e2e;
+}
+#button-enviar{
+    background-color: #7FC6C9;
+    color: #fff;
+    border:2px solid #78BBBE;
+    padding: 10px 20px;
 }
