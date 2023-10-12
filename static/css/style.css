@@ -75,3 +75,13 @@ label{
     border:2px solid #78BBBE;
     padding: 10px 20px;
 }
+
+.advInsert{
+    color: red;
+    font-size: 14px;
+}
+.error{
+    height: 4.3vh;
+    width: 38vw;
+    border: 1px solid #ff0000;
+}

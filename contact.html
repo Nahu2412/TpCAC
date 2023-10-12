@@ -27,34 +27,46 @@
             <section id="form-contact">
                 <div class="container">
                     <div id="place-form">
-                        <form>
+                        <form id="contact-register" method="POST" action="#">
                             <div id="Title-form">
                                 <h1>Contáctanos</h1><br>
                                 <p>Te responderemos lo antes posible.</p>
                                 <br>
                             </div>
-                            <div id="name-form" class="">
-                                <label for="nombre">Nombre<br>
+                            <div id="name-form">
+                                <label for="nombre">Nombre<span style="color: red;">*</span><br>
                                     <input class="inputstyle" type="text" id="nombre" name="nombre">
                                 </label>
+                                <div id="name-form-container">
+
+                                </div>
                             </div>
                             <div id="correo-form">
-                                <label for="correo">Correo<br>
+                                <label for="correo">Correo<span style="color: red;">*</span><br>
                                     <input class="inputstyle" type="email" name="correo" id="correo">
                                 </label>
+                                <div id="correo-form-container">
+
+                                </div>
                             </div>
                             <div id="telefono-form">
                                 <label for="telefono">Telefono<br>
                                     <input class="inputstyle" type="tel" name="telefono" id="telefono">
                                 </label>
+                                <div id="telefono-form-container">
+
+                                </div>
                             </div>
                             <div id="mensaje-form">
-                                <label for="mensaje">Mensaje<br>
-                                    <input class="inputstyle" type="text" name="mensaje" id="mensajeinput">
+                                <label for="mensaje">Mensaje<span style="color: red;">*</span><br>
+                                    <input class="inputstyle" type="text" name="mensaje" id="mensaje">
                                 </label>
+                                <div id="mensaje-form-container">
+
+                                </div>
                             </div>
                             <div id="button-form">
-                                <button id="button-enviar"><span>Enviar</span></button>
+                                <button type="submit" id="button-enviar"><span>Enviar</span></button>
                             </div>
                         </form>
                     </div>
@@ -64,5 +76,6 @@
         <footer>
 
         </footer>
+        <script src="./static/js/formulario.js"></script>
     </body>
 </html>
