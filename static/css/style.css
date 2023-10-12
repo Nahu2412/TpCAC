@@ -38,14 +38,22 @@ a:hover{
 /*****************************//*Body*/
 #form-contact{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #000;
+    /*background-color:antiquewhite;*/
     height: 45em;
 }
-
+.container{
+    margin: 60px 0px;
+}
 #contact-place{
     height: 35em;
     width: 35em;
     background-color: aqua;
+}
+#place-form{
+    margin: 0px 60px;
+}
+.inputstyle{
+    height: 4.3vh;
+    width: 30vw;
+    border: 1px solid #EDEDED;
 }
