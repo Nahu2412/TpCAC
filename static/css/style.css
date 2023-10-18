@@ -34,6 +34,63 @@ a:hover{
     margin: 0px 40px;
 }
 
+/**************************************************//*Index*/
+/*****************************//*Body*/
+.title-section{
+    display: flex;
+    flex-direction: column;
+    margin:0em 2em;
+    gap: 1em;
+}
+#mas-vendido{
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    height: 40em;
+    padding: 2em 0em 0em 0em;
+}
+.product-item{
+    display: flex;
+    height: 32em;
+    width: 23em;
+    padding:0.2em;
+    /*background-color: #2e2e2e;*/
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.img-product{
+    background-color: #000;
+    width: 22.2em;
+    height: 18.5em;
+    margin: 0.5em;
+}
+.description-product{
+    margin: 2em 0em;
+}
+#list-items{
+    display: flex;
+    margin: 0em 2em;
+    flex-wrap: wrap;
+    /*background-color: beige;*/
+}
+.image-product{
+    height: 100%;
+    width: 100%;
+}
+/***********************//*Section*/
+#break-info{
+    height: 43em;
+    background-color: yellowgreen;
+}
+#break-info{
+    background-image: url("https://picsum.photos/id/257/5000/3333");
+    background-size: auto;
+}
+/*****************************//*Footer*/
+footer{
+    height: 25em;
+}
 /**************************************************//*Contact*/
 
 /*****************************//*Body*/
