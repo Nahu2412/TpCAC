@@ -46,7 +46,6 @@ a:hover{
     display: flex;
     flex-direction: column;
     background-color: aliceblue;
-    height: 40em;
     padding: 2em 0em 0em 0em;
 }
 .product-item{
@@ -80,12 +79,28 @@ a:hover{
 }
 /***********************//*Section*/
 #break-info{
+    display: flex;
     height: 43em;
-    background-color: yellowgreen;
+    flex-direction: row-reverse;
+    justify-content: end;
+    align-items: center;
+    
 }
 #break-info{
     background-image: url("https://picsum.photos/id/257/5000/3333");
     background-size: auto;
+}
+#mision-block{
+    height: 35em;
+    width: 35em;
+    background-color:rgba(0.8, 0.8, 0.8, 0.8);
+    margin-right: 4em;
+}
+#mision-block h1{
+    color:#fff;
+}
+#mision-block p{
+    color:#fff;
 }
 /*****************************//*Footer*/
 footer{
@@ -142,4 +157,3 @@ label{
     width: 38vw;
     border: 1px solid #ff0000;
 }
-
