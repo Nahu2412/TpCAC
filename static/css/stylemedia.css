@@ -1,0 +1,30 @@
+@media screen and (max-width:428px){
+    header{
+        display: flex;
+        height: 7.5em;
+        background-color: aliceblue;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+    #nav-bar{
+        display: None;
+        flex-direction: column;
+        gap: 1em;
+    }
+    .container{
+        margin: 2.5em 0px;
+    }
+    .inputstyle{
+        height: 4.3vh;
+        width: 75vw;
+        border: 1px solid #cfcfcf;
+    }
+    #place-form{
+        display: flex;
+        margin: 0px 2.5em;
+    }
+    #ham-button{
+        display: flex;
+    }
+}

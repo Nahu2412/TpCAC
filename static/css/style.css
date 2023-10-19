@@ -20,7 +20,7 @@ a{
     padding: 12px;
 }
 a:hover{
-    background-color: aqua;
+    color: gold;
 }
 /**************************************************//*Header*/
 #title-pag{
@@ -142,3 +142,4 @@ label{
     width: 38vw;
     border: 1px solid #ff0000;
 }
+
