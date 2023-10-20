@@ -131,7 +131,15 @@ footer{
     flex-direction: column;
     gap: 30px;
 }
-
+.dual-inputs{
+    display: flex;
+    gap: 1em;
+}
+.input-s-style{
+    height: 4.3vh;
+    width: 20vw;
+    border: 1px solid #cfcfcf;
+}
 .inputstyle{
     height: 4.3vh;
     width: 38vw;
