@@ -124,7 +124,9 @@ footer{
 }
 #place-form{
     display: flex;
+    flex-direction: column;
     margin: 0px 180px;
+    gap: 12px;
 }
 #place-form form{
     display: flex;
@@ -142,7 +144,7 @@ footer{
 }
 .inputstyle{
     height: 4.3vh;
-    width: 38vw;
+    width: 41.2vw;
     border: 1px solid #cfcfcf;
 }
 label{
@@ -164,4 +166,13 @@ label{
     height: 4.3vh;
     width: 38vw;
     border: 1px solid #ff0000;
+}
+.error-dual{
+    height: 4.3vh;
+    width: 20vw;
+    border: 1px solid #ff0000;
+}
+textarea{
+    width: 49.5em;
+    height: 12em;
 }
