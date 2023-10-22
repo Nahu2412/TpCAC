@@ -44,7 +44,7 @@
     }
     textarea{
         height: 15em;
-        width: 48em;
+        width: 85vw;
         border: 1px solid #cfcfcf;
     }
 }
@@ -102,7 +102,7 @@
     }
     textarea{
         height: 15em;
-        width: 27em;
+        width: 84vw;
     }
     .input-s-style{
         height: 4.3vh;
