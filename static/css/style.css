@@ -36,6 +36,10 @@ a:hover{
 
 /**************************************************//*Index*/
 /*****************************//*Body*/
+body{
+    display: flex;
+    flex-direction: column;
+}
 .title-section{
     display: flex;
     flex-direction: column;
@@ -105,17 +109,21 @@ a:hover{
 /*****************************//*Footer*/
 footer{
     height: 25em;
+    background-color: #7FC6C9;
 }
 /**************************************************//*Contact*/
 
 /*****************************//*Body*/
+#path a{
+    color: #2e2e2e;
+}
 #form-contact{
     display: flex;
     /*background-color:antiquewhite;*/
-    height: 45em;
+    height: 75em;
 }
 .container{
-    margin: 40px 0px;
+    margin: 40px auto;
 }
 #contact-place{
     height: 35em;
@@ -128,6 +136,7 @@ footer{
     margin: 0px 180px;
     gap: 12px;
 }
+
 #place-form form{
     display: flex;
     flex-direction: column;
@@ -165,11 +174,13 @@ label{
 .error{
     height: 4.3vh;
     width: 38vw;
-    border: 1px solid #ff0000;
+    
 }
 .error-dual{
     height: 4.3vh;
     width: 20vw;
+}
+.error,.error-dual{
     border: 1px solid #ff0000;
 }
 textarea{
