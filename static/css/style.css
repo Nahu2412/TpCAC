@@ -108,6 +108,7 @@ footer{
 #container-footer{
     display: flex;
     flex-direction: row;
+    gap:100px;
 }
 #info-footer{
     display: flex;
@@ -117,7 +118,7 @@ footer{
 #copy-final{
     display: flex;
     justify-content: center;
-    margin: 1em 0em;
+    margin: 0.5em 0em;
 }
 .list-footer{
     display: flex;
@@ -145,6 +146,9 @@ footer{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+#navegacion-footer{
+    margin-left:20px;
 }
 /**************************************************//*Contact*/
 
@@ -237,7 +241,7 @@ textarea{
 /*Animaciones*/
 @keyframes aparecerd{
     from{
-        transform: translateX(-30px);
+        transform: translateY(30px);
         opacity: 0.0;
     }
     to{
