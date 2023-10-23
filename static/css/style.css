@@ -1,3 +1,15 @@
+/*
+.color1 {color: #acc7d5;}
+.color2 {color: #d1ede7;}
+.color3 {color: #001312;}
+.color4 {color: #747a7e;}
+.color5 {color: #f8f8f8;}
+*/
+:root{
+    --color-1:#f8f8f8;
+    --color-2:#747a7e;
+    --color-3:#acc7d5;
+}
 *{
     margin: 0;
     padding: 0;
@@ -6,7 +18,7 @@
 header{
     display: flex;
     height: 85px;
-    background-color: aliceblue;
+    background-color: var(--color-1);
     justify-content: space-between;
     align-items: center;
     /*border-bottom: 1px solid #000;*/
@@ -20,7 +32,8 @@ a{
     padding: 12px;
 }
 a:hover{
-    color: gold;
+    color: var(--color-3);
+    cursor: pointer;
 }
 /**************************************************//*Header*/
 #title-pag{
@@ -82,34 +95,53 @@ body{
     width: 100%;
 }
 /***********************//*Section*/
-#break-info{
-    display: flex;
-    height: 43em;
-    flex-direction: row-reverse;
-    justify-content: end;
-    align-items: center;
-    
-}
-#break-info{
-    background-image: url("https://picsum.photos/id/257/5000/3333");
-    background-size: auto;
-}
-#mision-block{
-    height: 35em;
-    width: 35em;
-    background-color:rgba(0.8, 0.8, 0.8, 0.8);
-    margin-right: 4em;
-}
-#mision-block h1{
-    color:#fff;
-}
-#mision-block p{
-    color:#fff;
+#sbody{
+    height: 50em;
 }
 /*****************************//*Footer*/
 footer{
-    height: 25em;
-    background-color: #7FC6C9;
+    background-color:var(--color-1);
+}
+#container-footer{
+    display: flex;
+    flex-direction: row;
+}
+#info-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#copy-final{
+    display: flex;
+    justify-content: center;
+    margin: 1em 0em;
+}
+.list-footer{
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+}
+.list-footer a{
+    box-sizing: border-box;
+}
+.title-list-footer h3{
+    margin: 0em 10px;
+}
+.block{
+    display: flex;
+    margin: 3em;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+}
+.place-list-footer{
+    margin: 0.5em 0em;
+}
+.list-footer-social{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 /**************************************************//*Contact*/
 
