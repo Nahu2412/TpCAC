@@ -1,12 +1,38 @@
 @media screen and (min-width:767px) and (max-width:1023px){
     header{
         display: flex;
-        height: 12em;
+        height: auto;
         background-color: aliceblue;
         align-items: center;
         flex-direction: column;
     }
-    header nav{
+    nav{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .nav-links{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .nav-links div{
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap:40px;
+        margin:20px;
+    }
+
+    #nav-place{
+        display: none;
+        animation: aparecerIzq .5s linear;
+    }
+    #abrir{
+        display: block;
+    }
+    #cerrar{
         display: none;
     }
     #title-pag{
@@ -14,7 +40,6 @@
     }
     #form-contact{
         display: block;
-        height: 80em;
     }
     #place-form{
         display: flex;
@@ -33,50 +58,111 @@
         flex-direction: column;
     }
     .inputstyle{
-        height: 4.3vh;
+        height: 4.4vh;
         width: 85vw;
         border: 1px solid #cfcfcf;
     }
     .input-s-style{
-        height: 4.3vh;
+        height: 4.4vh;
         width: 85vw;
         border: 1px solid #cfcfcf;
+    }
+    .error,.error-dual{
+        border: 1px solid #ff0000;
+        width: 85vw;
     }
     textarea{
         height: 15em;
         width: 85vw;
         border: 1px solid #cfcfcf;
     }
+    /***************************************************//*Footer*/
+    h5{
+        font-size: 1.4em;
+    }
+    .list-footer{
+        gap: 22px;
+    }
+    .list-footer li{
+        display: flex;
+        justify-content: center;
+    }
+    #navegacion-footer{
+        margin-left: 0px;
+        margin-top: 30px;
+    }
+    #container-footer{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+    }
+    .block{
+        margin:5em 0px;
+    }
 }
 
 @media screen and (max-width:767px){
     header{
         display: flex;
-        height: 7.5em;
+        height: auto;
         background-color: aliceblue;
         justify-content: space-between;
         align-items: center;
         flex-direction: column;
     }
+    nav{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .nav-links{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .nav-links div{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:40px;
+        margin:20px;
+    }
+    h1{
+        font-size: 1.7em;
+    }
     #form-contact{
         display: block;
         height: 90em;
+    }
+    #path{
+        margin-left:8vw;
     }
     #Title-form{
         display: flex;
         flex-direction: column;
         width: 85vw;
     }
+    #abrir{
+        display: block;
+    }
+    #cerrar{
+        display: none;
+    }
     #nav-bar{
-        display: None;
         flex-direction: column;
-        gap: 1em;
+        gap: 3em;
+        margin: 40px 40px;
+    }
+    #nav-place{
+        display: none;
+        animation: aparecerIzq .5s linear;
     }
     .container{
         margin: 2.5em 0px;
     }
     .inputstyle{
-        height: 4.3vh;
+        height: 4.4vh;
         width: 85vw;
         border: 1px solid #cfcfcf;
     }
@@ -105,7 +191,7 @@
         width: 84vw;
     }
     .input-s-style{
-        height: 4.3vh;
+        height: 4.4vh;
         width: 85vw;
         border: 1px solid #cfcfcf;
     }
@@ -120,5 +206,38 @@
     #cnc-local-form{
         flex-direction: column;
         align-items: center;
+    }
+    .error,.error-dual{
+        border: 1px solid #ff0000;
+        width: 85vw;
+    }
+    /***************************************************//*Footer*/
+    h5{
+        font-size: 1.5em;
+    }
+    #info-footer{
+        display: flex;
+        justify-content:flex-start;
+    }
+    #container-footer{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+    .list-footer{
+        gap:30px;
+    }
+    #navegacion-footer{
+        margin-top: 30px;
+    }
+}
+
+@keyframes aparecerIzq{
+    from{
+        opacity: 0.0;
+    }
+    to{
+        opacity: 1.0;
     }
 }

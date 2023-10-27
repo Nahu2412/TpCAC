@@ -1,0 +1,104 @@
+
+#path{
+    animation: aparecer 2s linear;
+}
+#path a{
+    color: #2e2e2e;
+}
+#form-contact{
+    display: flex;
+    /*background-color:antiquewhite;*/
+    /*height: 75em;*/
+}
+.container{
+    margin: 40px auto;
+}
+#contact-place{
+    height: 35em;
+    width: 35em;
+    background-color: aqua;
+}
+#place-form{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 180px;
+    gap: 12px;
+}
+
+#place-form form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.dual-inputs{
+    display: flex;
+    gap: 1em;
+    animation: aparecerd 1s linear;
+}
+.input-s-style{
+    height: 2.8em;
+    width: 20vw;
+    border: 1px solid #cfcfcf;
+}
+.inputstyle{
+    height: 2.8em;
+    width: 41.2vw;
+    border: 1px solid #cfcfcf;
+}
+label{
+    font-size: 15px;
+    color: #2e2e2e;
+}
+#button-enviar{
+    background-color: #7FC6C9;
+    color: #fff;
+    border:2px solid #78BBBE;
+    padding: 10px 20px;
+}
+
+.advInsert{
+    color: red;
+    font-size: 14px;
+}
+.error{
+    height: 2.8em;
+    width: 38vw;
+    
+}
+.error-dual{
+    height: 2.8em;
+    width: 20vw;
+}
+.error,.error-dual{
+    border: 1px solid #ff0000;
+}
+textarea{
+    width: 41vw;
+    height: 12em;
+}
+#telefono-form, #nombre-local-form, #direccion-local-form, #mqv-local-form,#cnc-local-form,#textarea-form{
+    animation: aparecerd 1s linear;
+}
+#button-form{
+    opacity: 0;
+    animation: aparecer 3s;
+    animation-fill-mode: forwards;
+}
+/*Animaciones*/
+@keyframes aparecerd{
+    from{
+        transform: translateY(8px);
+        opacity: 0.0;
+    }
+    to{
+        opacity: 1.0;
+    }
+}
+@keyframes aparecer{
+    from{
+        opacity: 0.0;
+    }
+    to{
+        opacity: 1.0;
+    }
+}

@@ -1,0 +1,90 @@
+
+.link_formulario{
+    color: var(--secundary-color);
+    font-size: 1.4vw;
+}
+
+
+.link_formulario:hover{
+    text-decoration: underline;
+}
+
+#title-pag{
+    margin: 0px 40px;
+}
+
+
+
+
+.sucursales{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.sucursal{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin:40px;
+ }
+
+    .sucursal:hover{
+        background: rgb(45, 46, 46, 0.5);  
+        border-radius: 15px;
+    }
+
+
+
+.sucursales_mapas{
+    margin: 30px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+.sucursal_datos{
+    padding-left: 20px;
+    width: 270px;
+    color: rgb(52, 50, 50);
+}
+
+.nombre{
+    font-size: 25px;
+    margin: 10px 0;
+}
+
+.direccion, .codigo_postal, .horario, .e-mail, .telefono{
+    font-size: 14px;
+    margin-bottom: 10px;
+    
+}
+.direccion::before{
+    content: "Dirección: ";
+    font-weight: bold;
+}
+.codigo_postal::before{
+    content: "Código Postal: ";
+    font-weight: bold;
+}
+.horario::before{
+    content: "Horario: ";
+    font-weight: bold;
+}
+.telefono::before{
+    content: "Teléfono: ";
+    font-weight: bold;
+}
+.e-mail::before{
+    content: "E-mail: ";
+    font-weight: bold;
+}
+.e-mail:hover{
+    text-decoration: underline;
+}
+.sucursales_mapa{
+    border: 2px solid black;
+    border-radius: 3px;
+    padding: 10px;
+    
+}

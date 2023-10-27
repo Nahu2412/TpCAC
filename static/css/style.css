@@ -46,7 +46,20 @@ a:hover{
     gap: 4em;
     margin: 0px 40px;
 }
-
+#abrir{
+    display: none;
+}
+#cerrar{
+    display: none;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+}
+#icon-place{
+    display: flex;
+    justify-content: center;
+}
 /**************************************************//*Index*/
 /*****************************//*Body*/
 body{
@@ -190,12 +203,12 @@ footer{
     animation: aparecerd 1s linear;
 }
 .input-s-style{
-    height: 4.3vh;
+    height: 4.3em;
     width: 20vw;
     border: 1px solid #cfcfcf;
 }
 .inputstyle{
-    height: 4.3vh;
+    height: 1em;
     width: 41.2vw;
     border: 1px solid #cfcfcf;
 }
@@ -215,24 +228,26 @@ label{
     font-size: 14px;
 }
 .error{
-    height: 4.3vh;
+    height: 4.3em;
     width: 38vw;
     
 }
 .error-dual{
-    height: 4.3vh;
+    height: 4.3em;
     width: 20vw;
 }
 .error,.error-dual{
     border: 1px solid #ff0000;
+    width: 20vw;
 }
 textarea{
     width: 41vw;
     height: 12em;
 }
+/*
 #telefono-form, #nombre-local-form, #direccion-local-form, #mqv-local-form,#cnc-local-form,#textarea-form{
     animation: aparecerd 1s linear;
-}
+}*/
 #button-form{
     opacity: 0;
     animation: aparecer 3s;
@@ -241,7 +256,7 @@ textarea{
 /*Animaciones*/
 @keyframes aparecerd{
     from{
-        transform: translateY(30px);
+        transform: translateY(8px);
         opacity: 0.0;
     }
     to{
