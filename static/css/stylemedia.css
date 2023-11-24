@@ -1,10 +1,21 @@
+:root{
+    --bg-color: rgb(255,255,255);
+    --primary-color: rgb(255,255,255);
+    --secundary-color: grey;
+    --third-color:#242357;
+    --bg-input-color:rgba(255,255,255,0.1);
+    --bg-footer: rgba(135, 132, 132, 0.438);
+}
+
 @media screen and (min-width:767px) and (max-width:1023px){
     header{
+        position: sticky;
         display: flex;
         height: auto;
-        background-color: aliceblue;
-        align-items: center;
+        background-color: var(--bg-color);
         flex-direction: column;
+        z-index: 10;
+        border-bottom: 2px solid var(--secundary-color);
     }
     nav{
         display: flex;
@@ -19,7 +30,7 @@
     .nav-links div{
         list-style: none;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         gap:40px;
         margin:20px;
@@ -93,22 +104,26 @@
     }
     #container-footer{
         display: flex;
+        flex-direction: column;
         width: 100%;
         justify-content: space-around;
+        gap: 20px;
     }
     .block{
-        margin:5em 0px;
+        margin:2em 0px;
     }
 }
 
 @media screen and (max-width:767px){
     header{
+        position: sticky;
         display: flex;
         height: auto;
-        background-color: aliceblue;
+        background-color: var(--bg-color);
         justify-content: space-between;
-        align-items: center;
         flex-direction: column;
+        border-bottom: 2px solid var(--secundary-color);
+        z-index: 10;
     }
     nav{
         display: flex;
