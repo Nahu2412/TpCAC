@@ -35,8 +35,8 @@ h3{
 }
 
 h4{
-    color:var(--secundary-color);
-    font-size: 1em;
+    color:var(--third-color);
+    font-size: 1.5em;
 }
 
 h5{
@@ -89,7 +89,7 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap:40px;
+    gap:150px;
 }
 
 .nav-links li > a{
@@ -194,7 +194,7 @@ nav {
     width: 40%;
 }
 
-#top-rated, #search {
+#top-rated, #search, #container-footer, #info-footer  {
     text-align: center;
 
 }
@@ -206,25 +206,24 @@ nav {
 
 
 .mision{
-    background-color: rgb(234, 234, 234);
+    background-image: url(../img/paisaje.mision.jpg);
     background-size: cover;
     background-position: center;
-    height: 200px;
+    height: 400px;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    opacity: 70%;
     border-radius: 10px;
     margin-bottom: 80px;
 
 }
 
 .mision-card{
-    padding: 0 150px;
+    padding: 0 100px;
 
 
 }
 
 .productos-container{
-    margin: 70px 0;
+    margin: 50px 0;
 }
 
 .product-grid{
@@ -306,24 +305,29 @@ nav {
 .product-item-detail-title-v2 {
     color: rgb(86, 86, 86);
     font-weight: bold;
-    margin: 5px 0px 0px 0px;
+    margin: 15px 20px 10px 50px; 
 }
 
 #container-footer{
     background-color:var(--bg-footer);
     display: flex;
     flex-direction: row;
-    gap:100px;
+    background-size: cover;
+    background-position: center;
+    padding: 0px 0px 0px 430px;
 }
 #info-footer{
-    display: flex;
-    flex-direction: row;
     justify-content: center;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
 }
 #copy-final{
     display: flex;
     justify-content: center;
     margin: 0.5em 0em;
+    padding: 15px 15px 15px 15px;
+    font-size: 0.8em;
 }
 .list-footer{
     display: flex;
@@ -365,7 +369,7 @@ a{
 #navegacion-footer{
     margin-left:20px;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 1em;
+    font-size: 0.9em;
 }
 
 
