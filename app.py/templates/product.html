@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link rel = "stylesheet" href = "../../static/css/style.css">
+    <link rel = "stylesheet" href = "../../static/css/style_tienda.css">
+</head>
+
+<body>
+    <a href="../../index.html">Volver al inicio</a class= "volver">
+    <div class= "product">
+        <img src="../../static/img/henry1.jpg" alt="Sombrero Henry" class="img-product">
+        
+        <div class= "product-description">
+            <h1>Sombrero Henry</h1>
+            <h2>Sombrero talle único</h2>
+            <h2>58 cm de circunferencia</h2>
+            <h2>Material: poliester</h2>
+            <h2>Tamaño de copa: 10 cm</h2>
+            <h2>Tamaño de ala: 9 cm</h2>
+            <h2>Ala plegable, con cordón de poliester</h2>
+            <br>
+            <h2>Precio: $11.250</h2>
+            <br>
+            <form action="{{ url_for('Agregar al carrito') }}" method="post">
+                <input type="hidden" name="product_id" value="{{ product.id }}">
+                <button class= "button" type="submit">Agregar al carrito</button>
+            </form>
+        </div>
+
+    </div>
+    
+   
+  
+</body>
+</html>
