@@ -36,13 +36,19 @@ h3{
 
 h4{
     color:var(--third-color);
-    font-size: 1.5em;
+    font-size: 1em;
 }
 
 h5{
     color: black;
     font-size: 1.5vw;
     font-family: 'bebas neue', sans-serif;
+}
+
+h6{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.2em;  
+    color: var(--secundary-color);
 }
 
 a{
@@ -218,8 +224,6 @@ nav {
 
 .mision-card{
     padding: 0 100px;
-
-
 }
 
 .productos-container{
@@ -308,15 +312,18 @@ nav {
     margin: 15px 20px 10px 50px; 
 }
 
+
+
 #container-footer{
-    background-color:var(--bg-footer);
+
     display: flex;
     flex-direction: row;
     background-size: cover;
     background-position: center;
-    padding: 0px 0px 0px 430px;
+    justify-content: space-around;
 }
 #info-footer{
+    background-color:var(--bg-footer);
     justify-content: center;
     background-size: cover;
     background-position: center;
@@ -367,7 +374,6 @@ a{
     align-items: center;
 }
 #navegacion-footer{
-    margin-left:20px;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 0.9em;
 }

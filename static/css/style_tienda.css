@@ -4,128 +4,28 @@ from flask_sqlalchemy import SQLAlchemy
 from stripe.checkout.session import create
 from flask_mail import Mail, Message
 
-:root{
-    --bg-color: rgb(255,255,255);
-    --primary-color: rgb(255,255,255);
-    --secundary-color: grey;
-    --third-color:#242357;
-    --bg-input-color:rgba(255,255,255,0.1);
-    --bg-footer: rgba(135, 132, 132, 0.438);
-}
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} 
-
-body{
-    background: var(--bg-color);
-    
-}
-
-h1{
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    color: var(--third-color);
-    font-size: 4vw;
-}
-
-h2{
-    color: var(--secundary-color);
-    font-size: 1.2em;
-}
-
-h3{
-    color: var(--secundary-color);
-    font-size: 2vw;
-}
-
-h4{
-    color:var(--third-color);
-    font-size: 1.5em;
-}
-
-h5{
-    color: black;
-    font-size: 1.5vw;
-    font-family: 'bebas neue', sans-serif;
-}
-
-a{
-    text-decoration: none;
-}
 
 
-header{
-    background-color:rgb(255,255,255);
-    width: 100%;
-    padding: 10px 50px;
-    top: 0;
-    left: 0;
-    position: sticky;
-    z-index: 9999;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-}
-
-nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;    
-    height: 60px;
-    margin: 0;
-
-}
-
-.logo{
-    width: 150px;
-    object-fit: cover; 
-    object-position: center;
-
-}
-
-#abrir{
-    display: none;
-}
-#cerrar{
-    display: none;
-}
-
-.nav-links{
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap:150px;
-}
-
-.nav-links li > a{
-    color: black;
-    text-decoration: none;
-}
-
-.nav-links a:hover{
-    color: var(--secundary-color) ;
-}
-
-.nav-links div{
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap:40px;
-}
 
 
 .catalogo{
     margin: 30px 0;
 }
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
 .btn-catalogo{
     background-color: var(--third-color);
     padding: 10px;
     border-radius: 10px;
     color: white;
-
+    font-family: 'Plus Jakarta Sans', sans-serif;
 }
+
 
 .btn-catalogo:hover{
     color: var(--secundary-color)!important;
@@ -139,13 +39,14 @@ nav {
     display: flex;
     flex-direction: row;
     gap:8px;
-    justify-content: center
+    justify-content: center;
+    margin: 40px 0;
+
 
 }
 
 .img-product{
     width: 50%;
-    height: 50%;
     object-fit: cover;
     padding-right: 5%;
     background: transparent;
@@ -156,8 +57,7 @@ nav {
     display: inline-block;
     max-height: 150px;
     text-align: justify;
-    padding-top: 15%;  
-    
+    padding-top: 7%;
 }
 
 .volver{
@@ -189,24 +89,6 @@ nav {
 
 
 
-
-
-#container-footer{
-    background-color:rgba(135, 132, 132, 0.438);
-    display: flex;
-    flex-direction: row;
-    background-size: cover;
-    background-position: center;
-    padding: 0px 0px 0px 0px;
-   
-}
-#info-footer{
-    justify-content: center;
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    
-}
 #copy-final{
     display: flex;
     justify-content: center;

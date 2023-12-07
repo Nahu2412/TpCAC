@@ -52,24 +52,6 @@
         </section>
     <header>
         
-        <h5 class="weather-title">Weather App</h5>
-                  <section id="weather-data">
-  
-                 <script>
-                            const apiKey = '4153da76b7ff9774c4463f86b0c285c2';
-                            const apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=Buenos Aires,arg&APPID=4153da76b7ff9774c4463f86b0c285c2`;
-                            const weatherDataElement = document.getElementById('weather-data');
-                    fetch(apiUrl)
-                        .then(response => response.json())
-                        .then(data => {
-                            const temperature = data.main.temp;
-                            var temperatureC = (temperature-300)*0.555
-                            const description = data.weather[0].description;
-                            weatherDataElement.innerHTML = `La temperatura actual es ${temperature}°C y el clima es ${description}.`;})
-                        .catch(error => { weatherDataElement.innerHTML = 'No se pudieron cargar los datos meteorológicos.';
-                        });
-                </script>
-            </section>
 
         <section id="search">
             <h5 class="search-title">¿Que estás buscando?</h5>
@@ -93,38 +75,38 @@
             <div class="productos-container">
 
                 <div id="top-rated-list" class="product-scroller">
-                     <div class="product-item-v2">
+                    <a href="/app.py/templates/product2.html"><div class="product-item-v2">
                         <div class="wrapper">
                             <img src="static/img/Gorro1.jpg" alt="Foto Gorro" class="product-item-img-v2">
                         </div>
                         <div class="product-item-detail-v2">
                             <p class="product-item-detail-title-v2">Boonie Pampa</p>
                         </div>
-                    </div>
-                    <div class="product-item-v2">
+                    </div></a>
+                    <a href="/app.py/templates/product4.html"><div class="product-item-v2">
                         <div class="wrapper">
                             <img src="static/img/Gorro2.jpg" alt="Foto Gorro" class="product-item-img-v2">
                         </div>
                         <div class="product-item-detail-v2">
                             <p class="product-item-detail-title-v2">Boonie Oliver</p>
                         </div>
-                    </div>
-                    <div class="product-item-v2">
+                    </div></a>
+                    <a href="/app.py/templates/product.html"><div class="product-item-v2">
                         <div class="wrapper">
                             <img src="static/img/Gorro3.jpg" alt="Foto Gorro" class="product-item-img-v2">
                         </div>
                         <div class="product-item-detail-v2">
                             <p class="product-item-detail-title-v2">Sombrero Henry</p>
                         </div>
-                    </div>
-                    <div class="product-item-v2">
+                    </div></a>
+                    <a href="/app.py/templates/product3.html"><div class="product-item-v2">
                         <div class="wrapper">
                             <img src="static/img/Gorro4.jpg" alt="Foto Gorro" class="product-item-img-v2">
                         </div>
                         <div class="product-item-detail-v2">
                             <p class="product-item-detail-title-v2">Gorra Anisa</p>
                         </div>
-                    </div>
+                    </div></a>
                     <div class="product-item-v2">
                         <div class="wrapper">
                             <img src="static/img/Gorro5.jpg" alt="Foto Gorro" class="product-item-img-v2">

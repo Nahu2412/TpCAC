@@ -21,7 +21,7 @@
 }
 .img-person {
     align-items: center;
-    width: 50%;
+    width: 35%;
     object-fit: cover; 
     object-position: center;
     border-radius: 75%;
@@ -45,3 +45,14 @@
 ;
 }
 
+.mision-quienes{
+    background-image: url(../img/paisaje.mision.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    border-radius: 10px;
+    margin-bottom: 80px;
+    text-align: center;
+    padding-top: 200px;
+}
