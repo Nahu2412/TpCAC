@@ -1,0 +1,85 @@
+#header-main{
+    display: flex;
+    align-items: center;
+    height: 200px;
+}
+
+#admin-title{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--third-color);
+    font-size: 3vw;
+}
+
+#form-bd{
+    height: 30em;
+}
+
+.label-text{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.form-inputs{
+    display: flex;
+
+}
+
+.cell{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 15em;
+}
+
+.input-s-style{
+    border:2px solid #777777;
+    height: 26px;
+    width: 14em;
+    padding: 0px 25px;
+}
+
+.form-controls{
+    display: flex;
+    flex-direction: row;
+}
+
+.controles{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background-color: #fff;
+    width: 100vw;
+}
+
+.button-form{
+    height: 50px;
+    width: 60px;
+}
+
+#tabla-bd{
+    display: flex;
+}
+
+#tabla-bd tr{
+    display: flex;
+    flex-direction: row;
+    width: 90vw;
+    font-family: 'Roboto', sans-serif;
+}
+
+.small-space{
+    width: 5em;
+}
+
+.medium-space{
+    width: 16.2em;
+}
+
+.container-bd{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
