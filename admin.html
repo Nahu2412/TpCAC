@@ -12,8 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@600&display=swap" rel="stylesheet">
     <link rel = "stylesheet"  href="static/css/estilos.pagina.ppal.css">
     <link rel="shortcut icon" href="./static/img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="./static/css/stylemedia.css">
-    <link rel="stylesheet" href="./static/css/style.css">
+    <link rel="stylesheet" href="./static/css/style_admin.css">
 </head>
 <body>
     <header class="header"> 
@@ -38,7 +37,7 @@
 
     <main>
         <div id="header-main">
-            <h1>Admin</h1>
+            <div id="admin-title">Admin Panel</div>
         </div>
         <div id="app">
             <div id="form-bd">
@@ -46,83 +45,38 @@
                     <div class="form-controls">
                         <div>
                             <div class="form-inputs">
-                                <div>
-                                    <label>Nombre:
+                                <div class="cell">
+                                    <label class="label-text">Nombre:
                                         <div>
                                             <input id="nombre" name="nombre" type="text" class="input-s-style" v-model="nombre">
                                         </div>
                                     </label>
                                 </div>
-                                <div>
-                                    <label>Talle:
-                                        <div>
-                                            <input id="talle" name="talle" type="text" class="input-s-style" v-model="talle">
-                                        </div>
-                                    </label>
-                                </div>
-                                <div>
-                                    <label>Circunferencia:
-                                        <div>
-                                            <input id="circunferencia" name="circunferencia" type="number" class="input-s-style" v-model="circunferencia">
-                                        </div>
-                                    </label>
-                                </div>
-                                <div>
-                                    <label>Material:
-                                        <div>
-                                            <input id="material" name="material" type="text" class="input-s-style" v-model="material">
-                                        </div>
-                                    </label>
-                                </div>
-                            </div>
-
-                            <div class="form-inputs">
-                                <div>
-                                    <label>Banner:
-                                        <div>
-                                            <input id="bannerForm" name="banner" type="file" class="input-s-style" v-model="banner" @change="onFileChange">
-                                        </div>
-                                    </label>
-                                </div>
-                                <div>
-                                    <label>Tamaño de copa:
-                                        <div>
-                                            <input id="tamaniocopa" name="tamaniocopa" type="number" class="input-s-style" v-model="tamaniocopa">
-                                        </div>
-                                    </label>
-                                </div>
-                                <div>
-                                    <label>Tamaño de ala:
-                                        <div>
-                                            <input id="tamanioala" name="tamanioala" type="number" class="input-s-style" v-model="tamanioala">
-                                        </div>
-                                    </label>
-                                </div>
-                                <div>
-                                    <label>Descripcion:
-                                        <div>
-                                            <input id="descripcion" name="descripcion" type="text" class="input-s-style" v-model="descripcion">
-                                        </div>
-                                    </label>
-                                </div>
-                                <div>
-                                    <label>Precio:
+                                <div class="cell">
+                                    <label class="label-text">Precio:
                                         <div>
                                             <input id="precio" name="precio" type="number" class="input-s-style" v-model="precio">
                                         </div>
                                     </label>
                                 </div>
-                                <div>
-                                    <label>
+                                <div class="cell">
+                                    <label class="label-text">Descripcion:
                                         <div>
-                                            <input id="id_producto" type="hidden" name="id" class="input-s-style" v-model="id_producto">
+                                            <input id="descripcion" name="descripcion" type="text" class="input-s-style" v-model="descripcion">
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="cell">
+                                    <label class="label-text">Imagen:
+                                        <div>
+                                            <input id="imagen" name="imagen" type="text" class="input-s-style" v-model="imagen">
                                         </div>
                                     </label>
                                 </div>
                             </div>
                         </div>
                         <div class="controles">
-                            <button class="button-form" type="button" v-on:click="saveProducto()">Agregar</button>
+                            <button class="button-form" type="button" v-on:click="saveProducto()">+</button>
                         </div>
                     </div>
                 </form>
@@ -131,33 +85,24 @@
                 <table id="tabla-bd" class="tabla_datos">
                     <thead>
                         <tr>
-                            <th>ID</th>
-                            <th>Nombre</th>
-                            <th>Talle</th>
-                            <th>Circunferencia</th>
-                            <th>Material</th>
-                            <th>Banner</th>
-                            <th>T.C</th>
-                            <th>T.A</th>
-                            <th>Descripcion</th>
-                            <th>Precio</th>
-                            <th>Opciones</th>
+                            <th class="small-space">ID</th>
+                            <th class="medium-space">Nombre</th>
+                            <th class="medium-space">Precio</th>
+                            <th class="medium-space">Descripcion</th>
+                            <th class="medium-space">Imagen</th>
+                            <th class="medium-space">Opciones</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr v-for="producto in productos">
                             <td>{{producto.id}}</td>
                             <td>{{producto.nombre}}</td>
-                            <td>{{producto.talle}}</td>
-                            <td>{{producto.circunferencia}}</td>
-                            <td>{{producto.material}}</td>
+                            <td>{{producto.precio}}</td>
+                            <td>{{producto.descripcion}}</td>
+                            <td>{{producto.imagen}}</td>
                             <td>
                                 <img v-bind:src="api_server+producto.banner" class="img-list">
                             </td>
-                            <td>{{producto.tamaniocopa}}</td>
-                            <td>{{producto.tamanioala}}</td>
-                            <td>{{producto.descripcion}}</td>
-                            <td>{{producto.precio}}</td>
                             <td>
                                 <button class="button-db" v-on:click="getProducto(producto.id)">G</button>
                                 <button class="button-db" v-on:click="deleteProducto(producto.id)">D</button>
