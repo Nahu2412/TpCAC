@@ -8,10 +8,12 @@
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: var(--third-color);
     font-size: 3vw;
+    margin: 0px 10px;
+    padding: 0px 20px;
 }
 
 #form-bd{
-    height: 30em;
+    height: 7em;
 }
 
 .label-text{
@@ -23,6 +25,11 @@
 .form-inputs{
     display: flex;
 
+}
+
+.table-cell{
+    padding: 5px 0px;
+    border-bottom: 2px solid #bdbdbd;
 }
 
 .cell{
@@ -61,6 +68,7 @@
 
 #tabla-bd{
     display: flex;
+    flex-direction: column;
 }
 
 #tabla-bd tr{
@@ -71,10 +79,12 @@
 }
 
 .small-space{
+    display: flex;
     width: 5em;
 }
 
 .medium-space{
+    display: flex;
     width: 16.2em;
 }
 
@@ -82,4 +92,32 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0px 0px;
+}
+
+#tabla-head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #daedfe;
+    height: 30px;
+}
+.center{
+    justify-content: center;
+    align-items: center;
+}
+
+.button-db{
+    height: 30px;
+    width: 30px;
+}
+
+.get{
+    background-color: #54fa3b;
+    border: 1px solid #47903c;
+}
+
+.delete{
+    background-color: #fe3434;
+    border: 1px solid #ad2b2b;
 }
