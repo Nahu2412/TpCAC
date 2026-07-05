@@ -7,14 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RinoKing</title>
     <link rel="rino king icon" href="./img/favicon.ico" type="image/x-icon">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@600&display=swap" rel="stylesheet">
     <link rel = "stylesheet"  href="static/css/estilos.pagina.ppal.css">
     <link rel="shortcut icon" href="./static/img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="./static/css/stylemedia.css">
+    <!-- <link rel="stylesheet" href="./static/css/stylemedia.css"> -->
 </head>
 
 <body>
@@ -33,6 +32,7 @@
                 <li><a href="quienes_somos.html">Quiénes Somos</a></li>
                 <li><a href="contact.html">Contacto</a></li>
                 <li><a href="sucursales.html">Sucursales</a></li>
+                <li><a href="admin.html">Admin</a></li>
                 <li><a href="https://drive.google.com/file/d/1C5f-A9ysZI1DBy0Rn9No90pR_yoJPxdg/view?usp=sharing" target="_blank">Ver catálogo</a></li>          
                 </div>
             </ul>
@@ -73,7 +73,6 @@
         <section id="top-rated">
             <h4>Productos destacados</h4>
             <div class="productos-container">
-
                 <div id="top-rated-list" class="product-scroller">
                     <a href="/app.py/templates/product2.html"><div class="product-item-v2">
                         <div class="wrapper">
@@ -91,57 +90,42 @@
                             <p class="product-item-detail-title-v2">Boonie Oliver</p>
                         </div>
                     </div></a>
-                    <a href="/app.py/templates/product.html"><div class="product-item-v2">
+                    <a href="/app.py/templates/product4.html"><div class="product-item-v2">
                         <div class="wrapper">
                             <img src="static/img/Gorro3.jpg" alt="Foto Gorro" class="product-item-img-v2">
                         </div>
                         <div class="product-item-detail-v2">
-                            <p class="product-item-detail-title-v2">Sombrero Henry</p>
+                            <p class="product-item-detail-title-v2">Boonie Oliver</p>
                         </div>
                     </div></a>
-                    <a href="/app.py/templates/product3.html"><div class="product-item-v2">
-                        <div class="wrapper">
-                            <img src="static/img/Gorro4.jpg" alt="Foto Gorro" class="product-item-img-v2">
-                        </div>
-                        <div class="product-item-detail-v2">
-                            <p class="product-item-detail-title-v2">Gorra Anisa</p>
-                        </div>
-                    </div></a>
-                    <div class="product-item-v2">
-                        <div class="wrapper">
-                            <img src="static/img/Gorro5.jpg" alt="Foto Gorro" class="product-item-img-v2">
-                        </div>
-                        <div class="product-item-detail-v2">
-                            <p class="product-item-detail-title-v2">Gorra Briona</p>
-                        </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sec-products">
+            <div id="app">
+                <div class="productos-container">
+                    <div class="productos-container-title">
+                        <h4>Todos los productos</h4>
                     </div>
-                    <div class="product-item-v2">
-                        <div class="wrapper">
-                            <img src="static/img/Gorro6.jpg" alt="Foto Gorro" class="product-item-img-v2">
-                        </div>
-                        <div class="product-item-detail-v2">
-                            <p class="product-item-detail-title-v2">Sombrero Jarod</p>
-                        </div>
-                    </div>
-                    <div class="product-item-v2">
-                        <div class="wrapper">
-                            <img src="static/img/Gorro7.jpg" alt="Foto Gorro" class="product-item-img-v2">
-                        </div>
-                        <div class="product-item-detail-v2">
-                            <p class="product-item-detail-title-v2">Capelina Emma</p>
-                        </div>
-                    </div>
-                    <div class="product-item-v2">
-                        <div class="wrapper">
-                            <img src="static/img/Gorro9.jpg" alt="Foto Gorro" class="product-item-img-v2">
-                        </div>
-                        <div class="product-item-detail-v2">
-                            <p class="product-item-detail-title-v2">Piluso Noha</p>
+                    <div class="products-section">
+                        <div v-for="product in productos">
+                            <div class="card-section">
+                                <div class="card">
+                                    <img class="card-image" :src="product.image" alt="">
+                                </div>
+                                <div>
+                                    <p>{{product.name}}</p>
+                                </div>
+                                <div>
+                                    <p>${{product.price}}</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>        
+        </section>
     </main>
 
     <footer>
@@ -182,6 +166,8 @@
             </div>
         </section>
     </footer>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./static/js/crud.js"></script>
     <script src="./static/js/menuh.js"></script>
 </body>
 
