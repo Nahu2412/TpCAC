@@ -23,10 +23,11 @@ createApp({
         })
         .then((response) => response.text())
         .then((data) => {
-            this.name='',
-            this.price='',
-            this.description='',
-            this.image=''
+            this.name='';
+            this.price='';
+            this.description='';
+            this.image='';
+            this.getProductos();
         })
         .catch((error) => {
             console.error("Error al enviar el formulario:", error);
@@ -36,6 +37,7 @@ createApp({
         fetch(`${this.api_backend}/api/v1/product/all`)
             .then((response) => response.json())
             .then((data) => {
+                console.log(data);
                 this.productos = data;
             })
             .catch((err) => {
@@ -66,8 +68,8 @@ createApp({
             image: this.image
         };
 
-        if(this.id_producto){ 
-            this.sendFormData(`${this.api_backend}/api/v1/product/edit/${this.id_producto}/`, productData,'PUT');
+        if(this.id_producto){
+            this.sendFormData(`${this.api_backend}/api/v1/product/edit/${this.id_producto}`, productData,'PUT');
         }else{
             this.sendFormData(`${this.api_backend}/api/v1/product/create`, productData,'POST');
         }
@@ -76,10 +78,9 @@ createApp({
         fetch(`${this.api_backend}/api/v1/product/delete/${id_producto}`, {
             method: 'DELETE',
         })
-        .then((response) => response.json())
+        .then((response) => response.text())
         .then((data) => {
-            alert("Producto Eliminado");
-            this.getProductos(`${this.api_backend}/api/v1/product/all`);
+            this.getProductos();
         })
         .catch((error) => {
             console.error("Error al eliminar", error);
