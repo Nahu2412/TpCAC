@@ -121,3 +121,8 @@
     background-color: #fe3434;
     border: 1px solid #ad2b2b;
 }
+
+.mini-image{
+    height: 50px;
+    width: 50px;
+}
