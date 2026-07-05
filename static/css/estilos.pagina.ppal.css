@@ -65,6 +65,8 @@ header{
     position: sticky;
     z-index: 9999;
     font-family: 'Plus Jakarta Sans', sans-serif;
+    box-shadow: 0px 5px 10px #696969;
+    align-items: center;
 }
 
 nav {
@@ -312,16 +314,58 @@ nav {
     margin: 15px 20px 10px 50px; 
 }
 
+.products-section{
+    height: 500px;
+}
+
+.products-section{
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+    padding: 0px 40px;
+}
+
+.card{
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 260px;
+    width: 190px;
+    padding: 5px 10px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #bbbbbb;
+}
+
+.card-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-image{
+    height: 200px;
+    width: 190px;
+    object-fit: cover;
+}
+
+.productos-container-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 #container-footer{
-
     display: flex;
     flex-direction: row;
     background-size: cover;
     background-position: center;
     justify-content: space-around;
 }
+
 #info-footer{
     background-color:var(--bg-footer);
     justify-content: center;
