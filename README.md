@@ -2,11 +2,9 @@
 
 ## Proyecto final integrador del curso Codo a Codo 4.0 
 
----
 
 Desarrollo de una página web tipo ecommerce integrando HTML, CSS y Javascript. Esta página web implementa una API REST creada en otro repositorio que consume datos en tiempo real.
 
----
 
 ## Ejecución
 El proyecto se puede levantar de tres formas:
