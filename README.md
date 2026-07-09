@@ -6,11 +6,11 @@
 Desarrollo de una página web tipo ecommerce integrando HTML, CSS y Javascript. Esta página web implementa una API REST creada en otro repositorio que consume datos en tiempo real.
 
 
-## Ejecución
+## 🚀Ejecución
 El proyecto se puede levantar de tres formas:
 1. Utilizando la extensión live server de Visual Studio Code.
-2. Subir el proyecto en cualquier servidor estático, un servidor muy conocido para esto es [Netlify](https://www.netlify.com/)
-3. Levantar los contenedores Docker de Front-end y Back-end
+2. Subir el proyecto en cualquier servidor estático, un servidor muy conocido para esto es [Netlify](https://www.netlify.com/).
+3. Levantar los contenedores Docker de frontend y backend.
 
 > **Nota**: Pueden ocurrir errores según la opción elegida para levantar el proyecto. 
 > * Si utilizas la extensión Live Server, verifica que la clase ProductController dentro del backend tenga la anotación `@CrossOrigin(origins="http://127.0.0.1:5500/")`
