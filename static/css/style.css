@@ -21,7 +21,6 @@ header{
     background-color: var(--color-1);
     justify-content: space-between;
     align-items: center;
-    /*border-bottom: 1px solid #000;*/
 }
 li{
     list-style: none;
@@ -244,10 +243,7 @@ textarea{
     width: 41vw;
     height: 12em;
 }
-/*
-#telefono-form, #nombre-local-form, #direccion-local-form, #mqv-local-form,#cnc-local-form,#textarea-form{
-    animation: aparecerd 1s linear;
-}*/
+
 #button-form{
     opacity: 0;
     animation: aparecer 3s;
