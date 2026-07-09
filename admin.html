@@ -18,7 +18,7 @@
     <header class="header"> 
         <nav>
             <ul class="nav-links"> 
-                <li><a href="index.html"><img class="logo" src="./static/img/Logo.jpg" alt="Logo"></a></li>
+                <li><a href="/"><img class="logo" src="./static/img/Logo.jpg" alt="Logo"></a></li>
                 <li>
                     <a id="boton-menu" onclick="accion_menu()">
                         <svg id="abrir" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
@@ -29,6 +29,7 @@
                 <li><a href="quienes_somos.html">Quiénes Somos</a></li>
                 <li><a href="contact.html">Contacto</a></li>
                 <li><a href="sucursales.html">Sucursales</a></li>
+                <li><a href="admin.html">Admin</a></li>
                 <li><a href="https://drive.google.com/file/d/1C5f-A9ysZI1DBy0Rn9No90pR_yoJPxdg/view?usp=sharing" target="_blank">Ver catálogo</a></li>          
                 </div>
             </ul>
@@ -48,64 +49,63 @@
                                 <div class="cell">
                                     <label class="label-text">Nombre:
                                         <div>
-                                            <input id="nombre" name="nombre" type="text" class="input-s-style" v-model="nombre">
+                                            <input id="nombre" name="name" type="text" class="input-s-style" v-model="name">
                                         </div>
                                     </label>
                                 </div>
                                 <div class="cell">
                                     <label class="label-text">Precio:
                                         <div>
-                                            <input id="precio" name="precio" type="number" class="input-s-style" v-model="precio">
+                                            <input id="precio" name="price" type="number" class="input-s-style" v-model="price">
                                         </div>
                                     </label>
                                 </div>
                                 <div class="cell">
                                     <label class="label-text">Descripcion:
                                         <div>
-                                            <input id="descripcion" name="descripcion" type="text" class="input-s-style" v-model="descripcion">
+                                            <input id="descripcion" name="description" type="text" class="input-s-style" v-model="description">
                                         </div>
                                     </label>
                                 </div>
                                 <div class="cell">
                                     <label class="label-text">Imagen:
                                         <div>
-                                            <input id="imagen" name="imagen" type="text" class="input-s-style" v-model="imagen">
+                                            <input id="imagen" name="image" type="text" class="input-s-style" v-model="image">
                                         </div>
                                     </label>
                                 </div>
                             </div>
                         </div>
                         <div class="controles">
-                            <button class="button-form" type="button" v-on:click="saveProducto()">+</button>
+                            <button class="button-form" type="button" v-on:click="saveProducto()">Save</button>
                         </div>
                     </div>
                 </form>
             </div>
             <div class="container-bd">
                 <table id="tabla-bd" class="tabla_datos">
-                    <thead>
+                    <thead id="tabla-head">
                         <tr>
-                            <th class="small-space">ID</th>
-                            <th class="medium-space">Nombre</th>
-                            <th class="medium-space">Precio</th>
-                            <th class="medium-space">Descripcion</th>
-                            <th class="medium-space">Imagen</th>
-                            <th class="medium-space">Opciones</th>
+                            <th class="small-space center table-cell">ID</th>
+                            <th class="medium-space center table-cell">Nombre</th>
+                            <th class="medium-space center table-cell">Precio</th>
+                            <th class="medium-space center table-cell">Descripcion</th>
+                            <th class="medium-space center table-cell">Imagen</th>
+                            <th class="medium-space center table-cell">Opciones</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr v-for="producto in productos">
-                            <td>{{producto.id}}</td>
-                            <td>{{producto.nombre}}</td>
-                            <td>{{producto.precio}}</td>
-                            <td>{{producto.descripcion}}</td>
-                            <td>{{producto.imagen}}</td>
-                            <td>
-                                <img v-bind:src="api_server+producto.banner" class="img-list">
+                            <td class="small-space center table-cell">{{producto.id}}</td>
+                            <td class="medium-space center table-cell">{{producto.name}}</td>
+                            <td class="medium-space center table-cell">{{producto.price}}$</td>
+                            <td class="medium-space center table-cell barrier">{{producto.description}}</td>
+                            <td class="medium-space center table-cell barrier">
+                                <img :src="producto.image" class="mini-image">
                             </td>
-                            <td>
-                                <button class="button-db" v-on:click="getProducto(producto.id)">G</button>
-                                <button class="button-db" v-on:click="deleteProducto(producto.id)">D</button>
+                            <td class="medium-space center table-cell">
+                                <button class="button-db get" v-on:click="getProducto(producto.id)">G</button>
+                                <button class="button-db delete" v-on:click="deleteProducto(producto.id)">D</button>
                             </td>
                         </tr>
                     </tbody>
@@ -157,7 +157,5 @@
     </footer>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./static/js/crud.js"></script>
-    <script src="./static/js/menuh.js"></script>
-    
 </body>
 </html>
